@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <meta name="description" content="마포 셔츠룸 문의 및 예약 안내입니다. 전화 한 통이면 바로 상담, 카톡으로 편하게 물어보세요. 처음이신 분들도 부담 없이 문의 주시면 친절하게 설명해드려요. 예약 폼도 준비되어 있어요.">
+    <meta name="keywords" content="마포 셔츠룸 문의, 셔츠룸 예약, 마포 셔츠룸 가격, 마포 유흥 문의, 마포 술집 예약, 투명 가격, 셔츠룸 상담, 망원 유흥, 합정 셔츠룸, 상수 유흥">
+    <link rel="canonical" href="https://shirtsroom.site/mapo-shirts/inquiry">
+    <meta property="og:title" content="마포 셔츠룸 — 문의 및 예약 | 문의">
+    <meta property="og:description" content="마포 셔츠룸 문의는 언제든 편하게. 전화, 카톡, 예약 폼으로 간편하게 상담하세요.">
+    <meta property="og:url" content="https://shirtsroom.site/mapo-shirts/inquiry">
+    <style>
+        :root {
+            --bg: #f8f8f8;
+            --surface: #ffffff;
+            --border: #e0e0e0;
+            --text-primary: #1a1a1a;
+            --text-secondary: #555555;
+            --accent: #000000;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans KR', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
+        }
+
+        /* ---- HEADER & NAV ---- */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .header-inner {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-emoji {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+            outline: none;
+        }
+
+        nav a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+            font-weight: 600;
+        }
+
+        .tel-link-header {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            background: var(--bg);
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
+
+        .tel-link-header:hover {
+            background: var(--border);
+        }
+
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text-primary);
+            margin: 5px 0;
+            transition: 0.2s;
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .tel-link-header {
+                align-self: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hamburger-menu {
+                display: block;
+                position: absolute;
+                top: 16px;
+                right: 20px;
+            }
+
+            nav {
+                width: 100%;
+                display: none;
+            }
+
+            nav.open {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 12px;
+            }
+
+            .tel-link-header {
+                margin-top: 8px;
+            }
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .page-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .page-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .info-icon {
+            font-size: 1.2rem;
+            width: 28px;
+            text-align: center;
+        }
+
+        .info-label {
+            font-weight: 600;
+            min-width: 60px;
+            color: var(--text-primary);
+        }
+
+        .info-value {
+            color: var(--text-secondary);
+        }
+
+        .info-value a {
+            color: var(--accent);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+            aspect-ratio: 16 / 9;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn-block {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 14px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+            margin-top: 8px;
+        }
+
+        .btn-block:hover {
+            opacity: 0.9;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: var(--bg);
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        @media (max-width: 480px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+        .bubble-box {
+            background: #f0f0f0;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .bubble-box::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 24px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid #f0f0f0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        footer a {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/mapo-shirts" class="logo">
+                <span class="logo-emoji">👔</span>
+                <span>마포 셔츠룸</span>
+            </a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="/mapo-shirts">홈</a></li>
+                    <li><a href="/mapo-shirts/about">소개</a></li>
+                    <li><a href="/mapo-shirts/price">가격</a></li>
+                    <li><a href="/mapo-shirts/reviews">후기</a></li>
+                    <li><a href="/mapo-shirts/inquiry" class="active">문의</a></li>
+                </ul>
+            </nav>
+            <a href="tel:01012345678" class="tel-link-header">📞 010-1234-5678</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">문의 & 예약</h1>
+        <p class="page-subtitle">궁금하신 거 있으시면 언제든 편하게 물어봐 주세요. 처음 오시는 분들도 부담 없이 연락 주시면, 하나하나 친절하게 설명해드릴게요.</p>
+
+        <!-- 연락처 정보 -->
+        <div class="card">
+            <h2>📋 연락처</h2>
+            <div class="info-row">
+                <span class="info-icon">📞</span>
+                <span class="info-label">전화</span>
+                <span class="info-value"><a href="tel:01012345678">010-1234-5678</a></span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon">💬</span>
+                <span class="info-label">카톡</span>
+                <span class="info-value">ID: maposhirts</span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon">✉️</span>
+                <span class="info-label">문자</span>
+                <span class="info-value">010-1234-5678 (24시간 접수)</span>
+            </div>
+            <p style="margin-top:12px; font-size:0.9rem; color:#777;">※ 밤 10시 이후에는 카톡이나 문자로 남겨주시면 확인하는 대로 바로 답장 드릴게요!</p>
+        </div>
+
+        <!-- 운영시간 -->
+        <div class="card">
+            <h2>🕐 운영시간</h2>
+            <div class="info-row">
+                <span class="info-icon">🌙</span>
+                <span class="info-label">영업</span>
+                <span class="info-value">오후 6시 ~ 새벽 4시</span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon">📅</span>
+                <span class="info-label">휴무</span>
+                <span class="info-value">연중무휴 (명절 당일만 쉽니다)</span>
+            </div>
+            <div class="info-row">
+                <span class="info-icon">⏰</span>
+                <span class="info-label">라스트</span>
+                <span class="info-value">새벽 2시 30분까지 입장 가능</span>
+            </div>
+            <div class="bubble-box" style="margin-top:16px;">
+                “늦은 시간에도 부담 없이 연락 주세요. 밤에 갑자기 생각나셨다면 카톡 보내시면 제가 자고 있지만 않으면 바로 답장 갑니다 😅”
+            </div>
+        </div>
+
+        <!-- 위치 및 지도 -->
+        <div class="card">
+            <h2>📍 위치</h2>
+            <p>서울 마포구 와우산로 123번길 지하 1층</p>
+            <p style="font-size:0.9rem; color:#777;">홍대입구역 3번 출구에서 도보 4분 / 합정역 5번 출구에서 도보 7분</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7123456789!2d126.922!3d37.552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sko!2skr!4v1234567890" allowfullscreen=""
+</body>
+</html>

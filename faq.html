@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="bpaas-design-system" content="editorial-apple">
+<meta name="bpaas-design-theme" content="kr-mono-chrome">
+<meta name="description" content="마포 셔츠룸에 대해 가장 많이 물어보시는 질문들을 모았어요. 가격, 예약, 시설, 이용 팁까지 궁금증을 싹 해결해 드립니다. 처음이신 분들도 걱정 마시고 편하게 읽어보세요.">
+<meta name="keywords" content="마포 셔츠룸, 셔츠룸 FAQ, 마포 셔츠룸 가격, 셔츠룸 예약, 마포 유흥, 셔츠룸 질문, 마포 술집 추천, 합정 셔츠룸, 망원 유흥">
+<link rel="canonical" href="https://shirtsroom.site/mapo-shirts/faq">
+<meta property="og:title" content="마포 셔츠룸 — 자주 묻는 질문 | FAQ">
+<meta property="og:description" content="마포 셔츠룸 처음이세요? 자주 묻는 질문들로 궁금증을 풀어드려요. 투명한 가격, 편안한 분위기, 친절한 응대까지.">
+<meta property="og:url" content="https://shirtsroom.site/mapo-shirts/faq">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<title>마포 셔츠룸 — 자주 묻는 질문 | FAQ</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8f8f8;
+  --text: #1a1a1a;
+  --text-secondary: #555555;
+  --border: #e0e0e0;
+  --accent: #1a1a1a;
+  --accent-hover: #333333;
+  --radius: 12px;
+  --max-width: 680px;
+  --font-mono: 'SF Mono', 'Pretendard', 'Inter', monospace;
+  --font-sans: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  letter-spacing: -0.015em;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ---- HEADER & NAV ---- */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.logo-emoji {
+  font-size: 1.3rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--accent-hover);
+}
+
+.tel-link-header {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tel-link-header:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ---- FAQ SECTION ---- */
+.faq-hero {
+  text-align: center;
+  padding: 3rem 0 1.5rem;
+}
+
+.faq-hero .emoji-large {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.faq-hero h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.faq-hero .subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.faq-list {
+  padding: 1.5rem 0 3rem;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.35rem;
+  margin-bottom: 0.85rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+  border-color: #c0c0c0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.faq-item summary {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+  transform: rotate(0deg);
+}
+
+.faq-answer {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+}
+
+.faq-answer strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ---- CTA BANNER ---- */
+.cta-banner {
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.cta-banner h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.cta-banner .cta-tel {
+  display: inline-block;
+  background: #fff;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cta-banner .cta-tel:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .tel-link-header {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .faq-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .faq-item {
+    padding: 1.1rem 1rem;
+  }
+
+  .faq-item summary {
+    font-size: 0.93rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/mapo-shirts" class="logo">
+      <span class="logo-emoji">👔</span> 마포셔츠룸
+    </a>
+    <nav aria-label="메인 메뉴">
+      <ul>
+        <li><a href="/mapo-shirts">홈</a></li>
+        <li><a href="/mapo-shirts/price">가격</a></li>
+        <li><a href="/mapo-shirts/faq" style="color: var(--accent); font-weight: 700;">FAQ</a></li>
+      </ul>
+    </nav>
+    <a href="tel:010-0000-0000" class="tel-link-header" aria-label="전화 예약하기">📞 예약문의</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="faq-hero">
+    <span class="emoji-large">💬</span>
+    <h1>자주 묻는 질문</h1>
+    <p class="subtitle">
+      처음 방문하시는 분들이<br>가장 궁금해하시는 것들만 쏙쏙 골랐어요.
+    </p>
+  </section>
+
+  <hr>
+
+  <section class="faq-list">
+
+    <details class="faq-item">
+      <summary>셔츠룸이 일반 술집이랑 뭐가 다른가요?</summary>
+      <div class="faq-answer">
+        가장 큰 차이는 <strong>프라이빗한 공간과 편안한 분위기</strong>예요. 일반 술집처럼 오픈된 홀에서 여러 테이블이 붙어 있지 않고, 개별 룸에서 조용히 즐기실 수 있어요. 셔츠 차림의 매니저분들이 테이블을 챙겨주셔서 어색하지 않게 대화도 자연스럽고, 처음 오시는 분들도 금방 적응하세요. "술집은 좀 시끄러워서 부담스러웠는데 여긴 진짜 편하다"라는 말씀 많이 들었어요.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>가격이 투명하다는데, 정말 추가 요금 없나요?</summary>
+      <div class="faq-answer">
+        네, <strong>약속드립니다.</strong> 저희는 예약 시점에 모든 비용을 오픈해서 안내드려요. 룸 이용료, 기본 주류, 매니저 동석 비용까지 포함된 금액이라, 계산할 때 "이게 뭐지?" 하는 항목이 없어요. 물론 개인적으로 추가 주류나 특별한 요청이 있으시면 그때 별도로 말씀드리고 진행해서, <strong>내가 모르는 사이에 금액이 올라가는 일은 절대 없어요.</strong> 가격표 페이지도 꼭 참고해 주세요.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>혼자 가도 괜찮은 분위기인가요?</summary>
+      <div class="faq-answer">
+        물론이에요. 오히려 혼자 오시는 분들이 꽤 많으세요. 퇴근길에 조용히 한잔하고 싶다거나, 생각 정리할 시간이 필요할 때 찾아주시는 단골분들도 계시고요. <strong>혼자라서 어색하지 않게</strong> 매니저분들이 자연스럽게 대화 리듬 맞춰드리니까 부담 없이 오세요. 혼술러들 환영합니다 🙌
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>예약은 어떻게 하나요? 당일 예약도 될까요?</summary>
+      <div class="faq-answer">
+        가장 확실한 건 <strong>전화 예약</strong>이에요. 상단이나 하단에 있는 번호로 전화 주시면 실시간으로 가능한 시간대 바로 안내드려요. 당일 예약도 룸 상황에 따라 가능하니까, 급하게 생각나셨을 때도 망설이지 말고 연락 주세요. 문자로 문의하셔도 괜찮고, "몇 시쯤 몇 명"만 보내주시면 제가 확인해서 회신드려요.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>시설은 어떤가요? 깔끔한 편인지 궁금해요.</summary>
+      <div class="faq-answer">
+        <strong>청결은 진짜 자신 있어요.</strong> 모든 룸은 매일 정리하고, 테이블·소파·화장실까지 신경 써서 관리하고 있어요. 인테리어도 지나치게 화려하지 않고 스위스 미니멀 감성으로 차분하게 해놔서, 데이트 코스로 오시거나 중요한 손님 모시고 와도 전혀 손색없다는 피드백 자주 받아요. 공기청정기 돌아가고, 조명도 따뜻한 톤이라 편안하실 거예요.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>셔츠룸 처음인데, 어떻게 행동해야 하나요?</summary>
+      <div class="faq-answer">
+        진짜 아무것도 안 하셔도 돼요. 오셔서 자리 잡고 계시면 매니저분이 들어오셔서 자연스럽게 인사드리고, 술 따라드리면서 대화 시작해요. <strong>억지로 유쾌한 척하실 필요 전혀 없고</strong>, 그냥 평소에 친구랑 수다 떨듯이 편하게 계시면 됩니다. "오늘 하루 어땠어요?" 같은 가벼운 질문으로 분위기 풀어드리니까, 어색할 틈이 없어요. 피곤하시면 조용히 음악 들으며 쉬셔도 좋고요.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>주차는 가능한가요? 위치가 어디예요?</summary>
+      <div class="faq-answer">
+        마포구 합정·망원·
+</body>
+</html>
